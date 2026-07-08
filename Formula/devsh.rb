@@ -5,21 +5,21 @@
 class Devsh < Formula
   desc "Shell that runs inside a development container"
   homepage "https://github.com/kukushkin/devsh"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kukushkin/devsh/releases/download/v1.0.0/devsh_Darwin_x86_64.tar.gz"
-      sha256 "172d020b9cfec901594c8ccf4891bfeb979c74f0fe54e1f29c56fd2470774cc8"
+      url "https://github.com/kukushkin/devsh/releases/download/v1.1.0/devsh_Darwin_x86_64.tar.gz"
+      sha256 "e4547f52e98558d9a7b9ecb8a4a0bd53bd5b09cc0262fd943566a3579f60794d"
 
       define_method(:install) do
         bin.install "devsh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kukushkin/devsh/releases/download/v1.0.0/devsh_Darwin_arm64.tar.gz"
-      sha256 "ec2e5afc340ea35327ee40430dd79c5b85a10f60ec43f4515be4aa01c04d8719"
+      url "https://github.com/kukushkin/devsh/releases/download/v1.1.0/devsh_Darwin_arm64.tar.gz"
+      sha256 "51abcf31fa0c2697026903b7255563ae76cae234afdb1b1398826618b41022d2"
 
       define_method(:install) do
         bin.install "devsh"
@@ -29,15 +29,15 @@ class Devsh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kukushkin/devsh/releases/download/v1.0.0/devsh_Linux_x86_64.tar.gz"
-      sha256 "cb3ec0d35afff83482e9067299bafac26a0ef1d9f214fde869dfd7d78928f729"
+      url "https://github.com/kukushkin/devsh/releases/download/v1.1.0/devsh_Linux_x86_64.tar.gz"
+      sha256 "e2a9887af9f62c1859e3e5aa303376a7440e8b7bb24ab3a799372bca9992061a"
       define_method(:install) do
         bin.install "devsh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kukushkin/devsh/releases/download/v1.0.0/devsh_Linux_arm64.tar.gz"
-      sha256 "180037c136d5f0831ee65743beb11e6dd5d5d049470c08194ed21270ed7187cd"
+      url "https://github.com/kukushkin/devsh/releases/download/v1.1.0/devsh_Linux_arm64.tar.gz"
+      sha256 "441c374b9e3054f41b04b5b1d4fe40a0efc9e0eb3278f42c51bb85af17190286"
       define_method(:install) do
         bin.install "devsh"
       end
